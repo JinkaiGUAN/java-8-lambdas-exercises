@@ -2,13 +2,17 @@ package com.insightfullogic.java8.exercises.chapter2;
 
 import com.insightfullogic.java8.exercises.Exercises;
 
-import javax.swing.text.DateFormatter;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
-import static java.lang.ThreadLocal.withInitial;
 
 public class Question2 {
 
-    public static ThreadLocal<DateFormatter> formatter
-            = Exercises.replaceThisWithSolution();
+    public static ThreadLocal<DateFormat> formatter = ThreadLocal.withInitial(() -> new SimpleDateFormat("dd-MMM" +
+            "-yyyy"));
+
+    public static void main(String[] args) {
+
+    }
 
 }
